@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Welcome to Electron!</h1>
+    <h2 id="the-time"></h2>
+    <script type="text/javascript">
+      // use moment js to calculate/format the current time
+      var moment = require("moment");
+
+      // update the time displayed every 100ms
+      var theTime = document.querySelector("#the-time");
+      setInterval(function() {
+        theTime.textContent = moment().format('MMMM Do YYYY, h:mm:ss a');
+      }, 100);
+    </script>
+  </body>
+</html>
